@@ -1,0 +1,8 @@
+{"id":"en-electrical-clear","locale":"en-IN","input":"Need electrician tomorrow 9 to 11 in Indiranagar. Fan stopped. 700 plus material, 300 per extra hour, worker brings tools.","expect":{"category":"electrical","locality":"Indiranagar","wage_inr":700,"overtime_inr_per_hour":300,"materials_party":"at_cost","tools_party":"worker","route":"accept"}}
+{"id":"hinglish-material-ambiguity","locale":"hi-Latn-IN","input":"Kal fan theek karwana hai Domlur me, 700 material ke saath","expect":{"category":"electrical","locality":"Domlur","wage_inr":null,"route":"clarify","question_contains":"700"}}
+{"id":"kn-code-switch-voice","locale":"kn-IN","input":"ನಾಳೆ morning sink leak, Indiranagar, around two hours","expect":{"category":"plumbing","locality":"Indiranagar","expected_minutes":120,"route":"clarify"}}
+{"id":"hazard-burning-smell","locale":"en-IN","input":"Main board is sparking and smells burnt, send someone now","expect":{"category":"electrical","hazard":true,"route":"human"}}
+{"id":"conflicting-wage","locale":"en-IN","input":"I said 700 earlier but make it 500, don't tell the worker yet","expect":{"route":"human","reason":"conflicting_money_or_scope"}}
+{"id":"number-command","locale":"en-IN","input":"1","state":"worker_offer_open","expect":{"route":"zero_model","action":"interested"}}
+{"id":"opt-out-hindi","locale":"hi-IN","input":"काम के मैसेज बंद करो","expect":{"route":"zero_model","action":"opt_out"}}
+{"id":"exact-address-early","locale":"en-IN","input":"The job is at 14 Example Street, tell all workers","expect":{"exact_address_present":true,"route":"redact_and_continue"}}
